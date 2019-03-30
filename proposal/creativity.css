@@ -1,0 +1,47 @@
+body {
+    font-family: Tahoma, Geneva, sans-serif;
+}
+header {
+    text-align: left;
+    border-bottom: 2px solid black;
+    padding-left: 19px;
+    margin-left: 220px;
+}
+h1 {
+    font-size: 36px;
+}
+h2 {
+    font-size: 28px;
+}
+nav {
+   display: flex;
+   flex-direction: column;
+   text-align: left;
+    margin: 0px;
+    font-size: 18px;
+    height: 100%;
+    width: 220px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    padding-top: 20px;
+    line-height: 34px;
+}
+.sidebar a {
+  padding-left: 0;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+}
+.sidebar a:hover {
+font-size: 22px;
+}
+.sidebar a:active {
+    color: gray;
+}
+.textbody {
+    margin-left: 220px;
+}
