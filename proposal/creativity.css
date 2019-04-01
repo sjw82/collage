@@ -1,11 +1,58 @@
+/* I had 19px of left padding on the header and when I added it to the body it messed things up */
+table {
+    font-size: 15px;
+    font-family: Geneva;
+    font-weight: normal;
+    table-layout: fixed;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+table tr td {
+    padding-bottom: 11px;
+    text-align: center;
+}
+th {
+    font-size: 18px;
+}
+.row1 {
+    width: 20%;
+}
+.row2 {
+    width: 5%;
+}
+.row3 {
+    width: 10%;
+}
+.row4 {
+    width: 40%;
+    text-align: left;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    text-decoration: none;
+    color: purple;
+}
 body {
     font-family: Tahoma, Geneva, sans-serif;
+}
+hr {
+    margin: 0;
+    border-top: 3px black solid;
 }
 header {
     text-align: left;
     border-bottom: 2px solid black;
-    padding-left: 19px;
+    /* padding-left: 19px;*/
     margin-left: 220px;
+    
 }
 h1 {
     font-size: 36px;
@@ -13,10 +60,14 @@ h1 {
 h2 {
     font-size: 28px;
 }
+h3 {
+    font-size: 22px;
+}
 nav {
-   display: flex;
-   flex-direction: column;
-   text-align: left;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-family: oswald;
     margin: 0px;
     font-size: 18px;
     height: 100%;
@@ -31,17 +82,69 @@ nav {
     line-height: 34px;
 }
 .sidebar a {
-  padding-left: 0;
-  text-decoration: none;
-  font-size: 18px;
-  color: white;
+    padding-left: 0;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
 }
 .sidebar a:hover {
-font-size: 22px;
+    font-size: 22px;
 }
 .sidebar a:active {
     color: gray;
 }
 .textbody {
     margin-left: 220px;
+}
+.photos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+img {
+    float: right
+}
+#prop {
+    text-indent: 25px;
+}
+.announce {
+    text-align: center;
+    text-decoration: underline;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 105%;
+    left: 50%;
+    margin-left: -50%;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
 }
